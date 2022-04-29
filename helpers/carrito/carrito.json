@@ -1,0 +1,28 @@
+[
+    {
+        "id": 2,
+        "timeStamp": "28/04/2022 - 22:04:56",
+        "productos": [
+            {
+                "nombre": "producto 1",
+                "precio": 15,
+                "foto": "https://dummyimage.com/200x200/fc80fc/ffffff.png&text=Producto+1",
+                "descripcion": "descripcion del producto",
+                "codigo": "codigo producto",
+                "timeStamp": "28/04/2022 - 17:00",
+                "stock": 20,
+                "id": 1
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "timeStamp": "28/04/2022 - 22:04:74",
+        "productos": []
+    },
+    {
+        "id": 4,
+        "timeStamp": "28/04/2022 - 22:04:51",
+        "productos": []
+    }
+]
