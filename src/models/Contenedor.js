@@ -69,14 +69,16 @@ class Contenedor{
     }
     async editById(id, newData){ //testing
         try{
-            const {title, price, thumbnail} = newData
+            const {nombre, precio, foto, descripcion, stock} = newData
             let array = await this.getAll()
             let item = array.find(el => el.id === parseInt(id))
             let index = array.indexOf(item)
             if(item){
-                title ? array[index].title = title : array[index].title = array[index].title
-                price ? array[index].price = parseInt(price) : array[index].price = array[index].price
-                thumbnail ? array[index].thumbnail = thumbnail : array[index].thumbnail = array[index].thumbnail
+                nombre ? array[index].nombre = nombre : array[index].nombre = array[index].nombre
+                precio ? array[index].precio = parseInt(precio) : array[index].precio = array[index].precio
+                foto ? array[index].foto = foto : array[index].foto = array[index].foto
+                descripcion ? array[index].descripcion = descripcion : array[index].descripcion = array[index].descripcion
+                stock ? array[index].stock = parseInt(stock) : array[index].stock = array[index].stock
                 
                 await fs.promises.writeFile(this.ruta, JSON.stringify(array))
                 return `Actualizado el producto con id: ${id}`
