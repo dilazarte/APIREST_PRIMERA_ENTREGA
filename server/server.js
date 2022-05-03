@@ -13,7 +13,9 @@ const {routerCarrito} = require('./src/routes/CarritoRoutes')
 //defino las rutas
 app.use('/api/productos', routerProductos); //Router para productos
 app.use('/api/carrito', routerCarrito); //Router para carrito
-
+app.use( (req, res) =>{ //ruta 404
+    res.status(404).json({Error: `Ruta ${req.originalUrl} no encontrada` });
+});
 
 const PORT = process.env.PORT || 8080;
 //server on
